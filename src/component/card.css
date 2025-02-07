@@ -1,0 +1,11 @@
+*{box-sizing: border-box;}
+h2{margin-bottom: 5px;}
+.card img{ border-radius: 12px; max-width: 100%; box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); height: 280px;}
+.container{max-width: 1140px; width: 100%; margin: auto; padding: 0 30px;}
+.img-card{position: relative;}
+.img-card-shadow{position: absolute; bottom: 0; left: 0; height: 40%; width: 100%; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; background: linear-gradient(rgba(27, 30, 36, 0) 0%, rgb(27, 30, 36) 84.21%); display: flex; align-items: flex-end; padding: 0 0 10px 10px;}
+.img-card span{ color: #FFF; font-size: 20px; font-weight: 700;}
+.card h3{padding-left: 10px; margin-top: 10px; font-size: 17px;}
+.shimmer{height: 317px; max-width: 258px; width: 100%;    background: linear-gradient(to right, #eee, #fafafa 50%, #eee);
+    border-radius: 15px;}
+.search{float: right;}
