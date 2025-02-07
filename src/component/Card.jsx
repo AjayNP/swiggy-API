@@ -1,24 +1,25 @@
 import {Grid2 } from "@mui/material";
 import "./card.css";
 import React from "react";
-import {CDN_URL} from "../utils/constants"
+// import {CDN_URL} from "../utils/constants"
 
-function Card({ cloudinaryImageId, costForTwo, name, avgRating, sla } ) {
+function Card({ title, price, image, rating } ) {
+  
   return (
     <>
    
       <Grid2 size={{ lg: 3, md: 4, xs: 12 }} className="card">
         <div className="img-card">
           <img
-            src={CDN_URL+cloudinaryImageId}
-            alt={cloudinaryImageId}
+            src={image}
+            alt={image}
           />
           <div className="img-card-shadow">
-            <span>{costForTwo}</span>
+            <span>{price}</span>
           </div>
         </div>
-        <h3>{name}</h3>
-        <p><span>⭐</span> {avgRating} : 🛵 <strong>{sla.slaString}</strong></p>
+        <h3>{title}</h3>
+        <p><span>⭐</span> {rating} </p>
       </Grid2>
       </>
   );
