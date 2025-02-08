@@ -59,10 +59,11 @@ function App() {
           </Button>
         </Grid2>
       </Grid2>
+      <br />
       <Grid2 container spacing={2} className="container">
         <Grid2 size={{ xs: 12 }} className="card">
           <h2>
-            Restaurants to explore
+            Explore your favourite products
             <Button
               variant="contained"
               size="small"
@@ -76,6 +77,8 @@ function App() {
             >
               4+ ⭐
             </Button>
+      
+
             <div className="search">
               <TextField label="Search" color="" size="small" value={searchValue} onChange={(e)=> setSearchValue(e.target.value)}/>
               <IconButton aria-label="search" onClick={()=>{
@@ -85,6 +88,7 @@ function App() {
                 <SearchIcon />
               </IconButton>
             </div>
+           
           </h2>
         </Grid2>
         {cardData.length === 0 && [
