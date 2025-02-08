@@ -1,4 +1,4 @@
-*{box-sizing: border-box;}
+*{box-sizing: border-box; margin: 0; padding: 0;}
 h2{margin-bottom: 5px;}
 .card img{ border-radius: 12px; max-width: 100%;  height: 200px;}
 .container{max-width: 1140px; width: 100%; margin: auto; padding: 0 30px;}
@@ -9,3 +9,9 @@ h2{margin-bottom: 5px;}
 .shimmer{height: 317px; max-width: 258px; width: 100%;    background: linear-gradient(to right, #eee, #fafafa 50%, #eee);
     border-radius: 15px;}
 .search{float: right;}
+header{background-color: #ff7300; padding: 20px;}
+header nav{display: flex; align-items: center;}
+header h1 .nav-link{color: #0a0f53; font-size: 20px; margin-right: 20px; padding-bottom: 5px;}
+header li{list-style: none; display: inline-block; margin: 0 15px; font-size: 18px;}
+.nav-link{color: #FFF; text-decoration: none; font-weight: 500;}
+.nav-link.active{color: #0a0f53;}

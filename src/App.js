@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 function App() {
   const [cardData, setCardData] = useState([]);
-  const [login, setLogin] = useState("Login");
   const [searchValue, setSearchValue] = useState("");
   const [filterRestaurant, setFilterRestaurant] = useState([]);
   const shimmer = <div className="shimmer"></div>;
@@ -31,8 +30,8 @@ function App() {
   const fetchData = async ()=>{
     const data = await fetch("https://fakestoreapi.com/products");
     const json = await data.json();
-    const extractedData = json.map((item)=>({
-      title: item?.title || "",
+    const extractedData = json.map((item,index)=>({
+      title: item?.title  + index || "",
       price: item?.price || "",
       description: item.description || "",
       image: item.image || "No image found",
@@ -44,21 +43,7 @@ function App() {
   }
   return (
     <div className="App">
-      <br />
-      <Grid2 container spacing={2} className="container">
-        <Grid2 size={{ xs: 12 }}>
-          <Button
-            variant="contained"
-            size="small"
-            sx={{ float: "right" }}
-            onClick={() => {
-              setLogin(login === "Login" ? "Logout" : "Login");
-            }}
-          >
-            {login}
-          </Button>
-        </Grid2>
-      </Grid2>
+   
       <br />
       <Grid2 container spacing={2} className="container">
         <Grid2 size={{ xs: 12 }} className="card">
@@ -67,15 +52,14 @@ function App() {
             <Button
               variant="contained"
               size="small"
-              color="secondary"
-              sx={{ marginLeft: "10px" }}
+              sx={{ marginLeft: "10px", backgroundColor: "#ff7300" }}
               onClick={() => {
                 const filterData = cardData.filter((x) => x.rating >= 4);
                 setFilterRestaurant(filterData);
                 
               }}
             >
-              4+ ⭐
+              4+ Rating
             </Button>
       
 
